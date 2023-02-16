@@ -1,0 +1,86 @@
+/*add here for code changes*/
+
+/*Commonly Changed Items*/
+:root{
+    --backgroundColour:#223E3F;
+    --buttonBackgroundColor:#01A27E;
+    --buttonTextColor:white;
+    --brownColor: #433836;
+    --textDarkBlueColor:#014598;
+    --gameTopBackground: white;
+    --backgroundColour2:#223E3F;
+    --popUp: white;
+    --popUpBackground:rgba(34, 62, 63, 0.8);
+    --scoreTextBackground:#FBCE59;
+    --borderColor: #FBCE59;
+    --borderColor2:#E3A96D;
+    --finalPopUpBackground:white;
+}
+
+/*StartPage*/
+.title{
+    width: 80%;
+    height: auto;
+}
+
+/*SelectionPage*/
+.choices,
+.instruction{
+    color: var(--textWhiteColor);
+}
+
+/*InstructionPage*/
+.details{
+    color: var(--textBlackColor);
+}
+
+/*GamePage*/
+.top{
+    justify-content: center;
+}
+
+.game{
+    background-color: var(--textWhiteColor);
+}
+
+.change{
+    font-size: 50px;
+    margin-top: 20px;
+    width: 75%;
+    border-radius: 20px;
+    text-align: center;
+    padding: 5px;
+}
+.answerButton{
+    width: 100%;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(1,1fr);
+}
+
+.answerBtn{
+    width: 100%;
+    border-radius: 20px;
+}
+
+/*PopUp*/
+.correctAnswer{
+    border-radius: 20px;
+}
+
+/*FinalPage*/
+.scoreText{
+    color: var(--brownColor);
+}
+
+/*ipad*/
+@media screen and (min-width:768px) and (max-width:1023px) {
+    .answerButton{
+        gap: 50px;
+    }
+
+    .answerBtn{
+        padding: 170px 0px;;
+    }
+}

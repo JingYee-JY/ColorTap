@@ -34,19 +34,23 @@ const selectionPage = document.getElementById("selectionPage");
 //here for selection page
 let levelIndex;
 
+let buttonSize;
+
 //here for level buttons condition
 const levels = [
-    {background:"transparent", font:"white", numberOfRandom: 0},
+    {background:"transparent", font:"black", numberOfRandom: 0},
     {background:"random", font:"white", numberOfRandom: 1},
     {background:"random", font:"random", numberOfRandom: 2}
 ]
 
-let colors = [{name:"blue", color:"blue"},
-              {name:"red", color:"red"},
-              {name:"green", color:"green"},
-              {name:"yellow", color:"yellow"},
-              {name:"pink", color:"pink"},
-              {name:"purple", color:"purple"}]
+let colors = [{name:"Blue", color:"#2F3F90"},
+              {name:"Red", color:"#FC3800"},
+              {name:"Green", color:"#03A343"},
+              {name:"Yellow", color:"#FBCE59"},
+              {name:"Pink", color:"#FF6DD6"},
+              {name:"Grey", color:"#ADADAD"},
+              {name:"Black", color:"#27030A"},
+              {name:"Orange", color:"#FFAA26"}]
 
 let current;
 let total = 5;
@@ -105,7 +109,10 @@ answerBtn.forEach(function(button){
 
         popUp.classList.remove("hide")
         
+        //set anser width,height and color
         correctAnswer.style.backgroundColor = answer.color
+        correctAnswer.style.height = buttonSize + "px"
+        correctAnswer.style.width = buttonSize + "px"
 
         if(data == answer.answer){
             mark.src = "./img/correct.png"
@@ -255,6 +262,12 @@ function Question(){
         button.style.backgroundColor = buttonColor
         button.setAttribute("data", colorName)
         buttonType.splice(buttonTypeIndex,1)
+
+        //get and set button height depending on width
+        let buttonDetails = button.getBoundingClientRect();
+        buttonSize = buttonDetails.width
+        button.style.height = buttonSize + "px"
+
     })
 
     console.log(tempoArray)

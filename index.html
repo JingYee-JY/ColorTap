@@ -8,9 +8,10 @@
 
     <!--CSS style & Fonts-->
     <link rel="stylesheet" href="css/layout.css"/>
-    <link rel="stylesheet" href="css/game.css"/>
+    <link rel="stylesheet" href="css/edit.css"/>
     <link rel="stylesheet" 
     href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@300;400;900&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
 
 </head>
 <body>
@@ -45,9 +46,11 @@
             <p>How to play</p>
             <div class="details">
               <p>
-                Choose the <br>
-                correct answer <br>
-                from the option
+                Match the written word <br>
+                to the correct colour. <br>
+                Focus on the words, <br>
+                resist the urge to tap the <br>
+                top card's colour.
               </p>
             </div>
         </div>
@@ -61,14 +64,14 @@
             <div class="question">
                 <p id="question-count" class="question-count">1/5</p>
             </div>
-            <div class="score">
+            <div class="score hide">
                 <p id="score-count" class="score-count"><b>0</b></p>
                 <p class="point"><b>Pt</b></p>
             </div>
         </div>
         <div class="game">
             <!--Add game code here-->
-            <div id="change"class="button">
+            <div id="change"class="change">
                 <p>Red</p>
             </div>
 
@@ -83,7 +86,7 @@
         <div class="background">
             <img class="mark" id="mark">
             <p class="checkAnswer" id="checkAnswer"></p>
-            <p class="showAnswer" id="showAnswer">The correct <br> answer are:</p>
+            <p class="showAnswer" id="showAnswer">the answer is</p>
             <div id="correctAnswer" class="correctAnswer"></div>
         </div>
     </div>
